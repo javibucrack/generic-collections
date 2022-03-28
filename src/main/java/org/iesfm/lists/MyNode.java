@@ -1,15 +1,15 @@
 package org.iesfm.lists;
 
-public class Nodo<E> {
+public class MyNode<E> {
     private E value;
-    private Nodo<E> siguiente;
+    private MyNode<E> siguiente;
 
-    public Nodo(E value, Nodo<E> siguiente) {
+    public MyNode(E value, MyNode<E> siguiente) {
         this.value = value;
         this.siguiente = siguiente;
     }
 
-    public void add(Nodo<E> nodo) {
+    public void add(MyNode<E> nodo) {
         if(siguiente ==  null) {
             siguiente = nodo;
         } else {
@@ -25,11 +25,11 @@ public class Nodo<E> {
         this.value = value;
     }
 
-    public Nodo<E> getSiguiente() {
+    public MyNode<E> getSiguiente() {
         return siguiente;
     }
 
-    public void setSiguiente(Nodo<E> siguiente) {
+    public void setSiguiente(MyNode<E> siguiente) {
         this.siguiente = siguiente;
     }
 }

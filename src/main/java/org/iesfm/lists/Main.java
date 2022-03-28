@@ -4,22 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
         // head -> null
-        Lista<Integer> l1 = new Lista<>();
+        MyLinkedList<Integer> l1 = new MyLinkedList<>();
         // head -> 1 -> null
         l1.add(1);
         // head -> 2 -> 1 -> null
         l1.add(2);
 
         // head -> null
-        Lista<String> l2 = new Lista<>();
+        MyLinkedList<String> l2 = new MyLinkedList<>();
         // head -> hola -> null
         l2.add("hola");
         // head -> Adios -> hola -> null
         l2.add("Adios");
     }
 
-    public static <E> Lista<E> crearLista(E s1, E s2) {
-        Lista<E> lista = new Lista<>();
+    public static <E> MyLinkedList<E> crearLista(E s1, E s2) {
+        MyLinkedList<E> lista = new MyLinkedList<>();
         lista.add(s1);
         lista.add(s2);
         return lista;
