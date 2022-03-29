@@ -1,16 +1,16 @@
 package org.iesfm.queue;
 
-public class Queue {
+public class Queue<E> {
 
-    private Node head;
-    private Node last;
+    private Node<E> head;
+    private Node<E> last;
 
     public Queue() {
         head = null;
     }
 
-    public void enqueue(String value) {
-        Node node = new Node(value, null);
+    public void enqueue(E value) {
+        Node<E> node = new Node<>(value, null);
         if (head == null) {
             head = node;
             last = node;
@@ -20,11 +20,11 @@ public class Queue {
         }
     }
 
-    public String dequeue() throws EmptyQueueException {
+    public E dequeue() throws EmptyQueueException {
         if (head == null) {
             throw new EmptyQueueException();
         }
-        String value = head.getValue();
+        E value = head.getValue();
         head = head.getNext();
         return value;
     }

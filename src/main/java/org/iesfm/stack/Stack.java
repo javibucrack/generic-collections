@@ -9,10 +9,14 @@ package org.iesfm.stack;
  * <p>
  * La operación de extraer de la parte superior se llama pop (desapilar)
  */
-public class Stack {
-    private Node top;
+public class Stack<E> {
+    private Node<E> top;
 
-    public Stack(Node top) {
+    public Stack() {
+        top = null;
+    }
+
+    public Stack(Node<E> top) {
         this.top = null;
     }
 
@@ -22,22 +26,20 @@ public class Stack {
      * @return
      * @throws EmptyStackException
      */
-    public int pop() throws EmptyStackException {
+    public E pop() throws EmptyStackException {
         if (top == null) {
             throw new EmptyStackException();
         }
-        int value = top.getValue();
+        E value = top.getValue();
         top = top.getNext();
         return value;
     }
 
     /**
      * Añade el valor a la parte superior de la pila
-     *
-     * @param value
      */
-    public void push(int value) {
-        Node node = new Node(value, top);
+    public void push(E value) {
+        Node<E> node = new Node<>(value, top);
         top = node;
     }
 }
