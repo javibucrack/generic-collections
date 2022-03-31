@@ -42,4 +42,13 @@ public class Stack<E> {
         Node<E> node = new Node<>(value, top);
         top = node;
     }
+
+    @SafeVarargs
+    public static <E> Stack<E> StackOf(E... values) {
+        Stack<E> stack = new Stack<>();
+        for (E value : values) {
+            stack.push(value);
+        }
+        return stack;
+    }
 }

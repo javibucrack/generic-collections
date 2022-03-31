@@ -26,5 +26,9 @@ public class Main {
         queue3.enqueue(true);
         boolean v3 = queue3.dequeue();
         System.out.println(v3);
+
+        Queue<Integer> queue4 = Queue.queueOf(1, 5, 2, 8, -1);
+        int v4 = queue4.dequeue();
+        System.out.println(v4);
     }
 }

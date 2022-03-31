@@ -18,5 +18,10 @@ public class Main {
         stack2.push("Adios");
         String v2 = stack2.pop();
         System.out.println(v2);
+
+        Stack<Integer> stack3 = Stack.StackOf(1, 5, -2, 6, 10);
+        int v3 = stack3.pop();
+        System.out.println(v3);
+
     }
 }

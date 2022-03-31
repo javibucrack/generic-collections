@@ -48,6 +48,7 @@ public class MyLinkedList<E> {
         return false;
     }
 
+    @SafeVarargs
     public static <E> MyLinkedList<E> listOf(E... values) {
         MyLinkedList<E> lista = new MyLinkedList<>();
         for (E value : values) {

@@ -1,5 +1,7 @@
 package org.iesfm.queue;
 
+import org.iesfm.stack.Stack;
+
 public class Queue<E> {
 
     private Node<E> head;
@@ -27,5 +29,14 @@ public class Queue<E> {
         E value = head.getValue();
         head = head.getNext();
         return value;
+    }
+
+    @SafeVarargs
+    public static <E> Queue<E> queueOf(E... values) {
+        Queue<E> queue = new Queue<>();
+        for (E value : values) {
+            queue.enqueue(value);
+        }
+        return queue;
     }
 }
