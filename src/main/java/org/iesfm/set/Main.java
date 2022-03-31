@@ -3,7 +3,7 @@ package org.iesfm.set;
 public class Main {
 
     public static void main(String[] args) {
-        MyTreeSet<String> tree = new MyTreeSet();
+        MyTreeSet<String> tree = new MyTreeSet<>();
         tree.add("Hola");
         tree.add("ZzZ");
         tree.add("Adiós");
