@@ -39,13 +39,21 @@ public class MyLinkedList<E> {
         MyNode<E> node = head;
 
         while (node != null) {
-            if(node.getValue().equals(value)) {
+            if (node.getValue().equals(value)) {
                 return true;
             }
 
             node = node.getSiguiente();
         }
         return false;
+    }
+
+    public static <E> MyLinkedList<E> listOf(E... values) {
+        MyLinkedList<E> lista = new MyLinkedList<>();
+        for (E value : values) {
+            lista.add(value);
+        }
+        return lista;
     }
 
     public MyNode<E> getHead() {
