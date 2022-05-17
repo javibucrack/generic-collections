@@ -17,8 +17,11 @@ public class MyLinkedList<E> {
      * @param value
      */
     public void add(E value) {
-        MyNode<E> nodo = new MyNode<>(value, head);
-        head = nodo;
+        if (head == null){
+            head=new MyNode<>(value,null);
+        }else {
+            
+        }
     }
 
     public void adAtBeggining(E value) {
