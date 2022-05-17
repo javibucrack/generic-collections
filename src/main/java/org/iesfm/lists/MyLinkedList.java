@@ -21,6 +21,11 @@ public class MyLinkedList<E> {
         head = nodo;
     }
 
+    public void adAtBeggining(E value) {
+        MyNode<E> node = new MyNode<>(value, head);
+        head = node;
+    }
+
     public int size() {
         // head --> null: size =0
         // head --> 1 --> null: size = 1
@@ -50,6 +55,14 @@ public class MyLinkedList<E> {
 
     @SafeVarargs
     public static <E> MyLinkedList<E> listOf(E... values) {
+        MyLinkedList<E> lista = new MyLinkedList<>();
+        for (E value : values) {
+            lista.add(value);
+        }
+        return lista;
+    }
+
+    public static <E> MyLinkedList<E> of(E... values) {
         MyLinkedList<E> lista = new MyLinkedList<>();
         for (E value : values) {
             lista.add(value);
